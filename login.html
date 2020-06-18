@@ -1,61 +1,37 @@
 <meta charset="UTF-8">
 <script>
-
-	function pula (){
-
+	function pula() {
 		document.write("<br><br>")
 	}
 
-	function mostra(frase){
-
-		document.write(frase);
+	function mostra(frase) {
+		document.write(frase)
 	}
 
+	var loginCadastrado = "alura"
+	var senhaCadastrada = "alura321"
+	var tentativas = 3
+	var link = "https://www.alura.com.br/"
 
+  var loginInformado = prompt("Informe seu nome de usuário:")
 
-    var loginCadastrado = "alura";
-    var senhaCadastrada = "alura321";
-    var tentativas = 3
-    var link = "https://www.alura.com.br/"
-
-
-    var loginInformado = prompt("Informe seu nome de usuário:");
-
-	while(loginInformado != loginCadastrado){
-
-    		alert("Usuário não encontrado.");
-			var loginInformado = prompt("Informe seu nome de usuário:");
-
+	while(loginInformado != loginCadastrado) {
+    alert("Usuário não encontrado.");
+		var loginInformado = prompt("Informe seu nome de usuário:")
 	}
-	
-	var senhaInformada = prompt("Informe sua senha");
-	
+
+	var senhaInformada = prompt("Informe sua senha")
+
 	while(senhaInformada!= senhaCadastrada && tentativas >=1){
+		alert("Senha incorreta")
+		var senhaInformada = prompt("Informe sua senha: " + tentativas + " tentativas.")
+		tentativas = tentativas - 1
+	}
 
-		
-			alert("Senha incorreta");
-			var senhaInformada = prompt("Informe sua senha: "+tentativas+" tentativas.");
-			tentativas = tentativas - 1;
-			
-
-		}if(senhaCadastrada == senhaInformada){
-
-			alert("Bem vindo ao sistema Alura.") 
-			mostra("Clique " + link +" aqui para acessa-lo.")
-
-		}else{
-
-			alert("Seu acesso foi bloquiado, solicite uma nova senha.")   
-
-
-		}
-
-	
-
-   		
-			
-		
-
+	if(senhaCadastrada == senhaInformada){
+		alert("Bem vindo ao sistema Alura.") 
+		mostra("Clique " + link +" aqui para acessa-lo.")
+	} else {
+		alert("Seu acesso foi bloquiado, solicite uma nova senha.")
+	}
 </script>
-
-
